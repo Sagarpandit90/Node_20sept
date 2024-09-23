@@ -1,0 +1,34 @@
+<%- include('./base/header.ejs') %>
+    <div class="container">
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="row">SNo.</th>
+                    <td>RollNo</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Father Name</td>
+                    <td>Adhar Card No</td>
+                    <td>Mobile No</td>
+                </tr>
+            </thead>
+            <% students.forEach((studentData,index) => { %>
+                <tr>
+                    <th scope="row"><%= index+1 %></th>
+                    <td class="tdata"><%= studentData.rollNo %></td>
+                    <td class="tdata"><%= studentData.firstName %></td>
+                    <td class="tdata"><%= studentData.lastName %></td>
+                    <td class="tdata"><%= studentData.fatherName %></td>
+                    <td class="tdata"><%= studentData.adharCardNo %></td>
+                    <td class="tdata"><%= studentData.mobileNo %></td>
+                </tr>
+            <% }); %>
+        </table>
+    </div>
+
+    <style>
+        /* .tdata{
+            background: linear-gradient(to right,#ccc 50%);
+        } */
+    </style>
+    <%- include('./base/footer.ejs') %>
