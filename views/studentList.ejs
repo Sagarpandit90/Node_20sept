@@ -10,6 +10,8 @@
                     <td>Father Name</td>
                     <td>Adhar Card No</td>
                     <td>Mobile No</td>
+                    <td>Actions</td>
+                    <td>Delete</td>
                 </tr>
             </thead>
             <% students.forEach((studentData,index) => { %>
@@ -21,6 +23,8 @@
                     <td class="tdata"><%= studentData.fatherName %></td>
                     <td class="tdata"><%= studentData.adharCardNo %></td>
                     <td class="tdata"><%= studentData.mobileNo %></td>
+                    <td><a href="/edit/student/page/<%= studentData._id%>" class="btn btn-warning w-75">Edit</a></td>
+                    <td><a href="/delete/student/<%= studentData._id%>" class="btn btn-danger w-75">Delete</a></td>
                 </tr>
             <% }); %>
         </table>

@@ -10,7 +10,7 @@ app.use(student);
 app.set('view engine' , 'ejs');
 app.set('views',path.resolve('./views'));
 
-app.listen(3000,(e)=>{
+app.listen(5000,(e)=>{
     if (e) {
         console.log(error);
         
